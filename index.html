@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Signal — Intelligence for Spirit, Body &amp; Mind</title>
+<meta name="description" content="The Signal — InnovLead Canada's twice-weekly intelligence newsletter. Spirit, Body, Mind, Ledger, Build, World Pulse.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#0f0f0f;font-family:Georgia,'Times New Roman',serif;color:#1a1a1a;padding:48px 16px;line-height:1.6;}
+  .sheet{max-width:840px;margin:0 auto;background:#f5f0e8;border:1px solid #2a2a2a;box-shadow:0 0 50px rgba(0,0,0,.7);}
+  .masthead{text-align:center;padding:44px 32px 28px;border-bottom:5px double #1a1a1a;}
+  .kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#6b5e4a;margin-bottom:14px;}
+  .masthead h1{font-size:72px;letter-spacing:2px;font-weight:700;line-height:1;}
+  .tagline{font-style:italic;font-size:17px;color:#4a4233;margin-top:12px;}
+  .rule{text-align:center;color:#8a7a5e;padding:10px 0;font-size:14px;letter-spacing:6px;}
+  main{padding:12px 40px 40px;}
+  .section-label{text-align:center;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#6b5e4a;margin:18px 0 26px;}
+  .edition{border-bottom:1px solid #cabfa6;padding:26px 0;}
+  .edition:last-child{border-bottom:none;}
+  .edition a{text-decoration:none;color:inherit;display:block;}
+  .edition a:hover h2{color:#7a2e1e;}
+  .vol{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#8a7a5e;margin-bottom:6px;}
+  .edition h2{font-size:27px;line-height:1.25;margin-bottom:8px;}
+  .edition p{font-size:15px;color:#3a3329;margin-bottom:10px;}
+  .read{font-size:13px;font-style:italic;color:#7a2e1e;letter-spacing:.5px;}
+  .empty{text-align:center;font-style:italic;color:#6b5e4a;padding:60px 20px;font-size:16px;}
+  footer{background:#0f0f0f;color:#c9bfa6;text-align:center;padding:22px;font-size:12px;letter-spacing:2px;}
+  @media(max-width:560px){.masthead h1{font-size:46px;}main{padding:12px 22px 32px;}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="masthead">
+    <div class="kicker">InnovLead Canada · Twice Weekly</div>
+    <h1>The Signal</h1>
+    <div class="tagline">Intelligence for Spirit, Body &amp; Mind</div>
+  </header>
+  <div class="rule">❧ ❖ ✦ ❖ ❧</div>
+  <main>
+    <div class="section-label">The Archive</div>
+    <div id="editions"><p class="empty">Loading editions…</p></div>
+  </main>
+  <footer>KNOWLEDGE IS SOVEREIGNTY. STAY SHARP.</footer>
+</div>
+<script>
+  fetch('editions.json',{cache:'no-store'})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      var host=document.getElementById('editions');
+      var eds=(d&&d.editions?d.editions:[]).slice().reverse();
+      if(!eds.length){host.innerHTML='<p class="empty">The first edition is on its way.</p>';return;}
+      host.innerHTML=eds.map(function(e){
+        return '<article class="edition"><a href="editions/'+e.slug+'.html">'
+          +'<div class="vol">Vol. '+e.volume+' · '+e.date+'</div>'
+          +'<h2>'+e.title+'</h2>'
+          +'<p>'+e.summary+'</p>'
+          +'<span class="read">Read this edition →</span></a></article>';
+      }).join('');
+    })
+    .catch(function(){
+      document.getElementById('editions').innerHTML='<p class="empty">The first edition is on its way.</p>';
+    });
+</script>
+</body>
+</html>
