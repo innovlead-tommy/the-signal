@@ -209,6 +209,22 @@
       "volume": 27,
       "date": "Saturday, August 22, 2026",
       "summary": "Look at the friction across this edition, and you will find a quiet rebellion against the tyranny of rigid categorization. We suffocate under forced labels and false binaries. In o…"
+    },
+    {
+      "slug": "vol-28-2026-09-16",
+      "title": "Vol. 28 — Wednesday, September 16, 2026",
+      "volume": 28,
+      "date": "Wednesday, September 16, 2026",
+      "summary": "This week exposes the catastrophic cost of false comfort and the necessity of reclaiming our judgment. Industry-funded nutritional studies manufacture doubt, prioritizing profit ov…",
+      "governance": {
+        "gateVersion": "1.7",
+        "verdict": "PASS",
+        "checksRun": 12,
+        "blocking": 0,
+        "advisory": 3,
+        "approvedBy": "1882467643",
+        "approvedAt": "2026-09-16T07:18:47.656Z"
+      }
     }
   ]
 }
