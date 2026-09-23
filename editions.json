@@ -225,6 +225,22 @@
         "approvedBy": "1882467643",
         "approvedAt": "2026-09-16T07:18:47.656Z"
       }
+    },
+    {
+      "slug": "vol-29-2026-09-23",
+      "title": "Vol. 29 — Wednesday, September 23, 2026",
+      "volume": 29,
+      "date": "Wednesday, September 23, 2026",
+      "summary": "This week, a singular tension emerges across every domain: the friction between rigid systems and nuanced reality. In medicine, this manifests when psychiatry forces five distinct …",
+      "governance": {
+        "gateVersion": "1.7",
+        "verdict": "PASS",
+        "checksRun": 12,
+        "blocking": 0,
+        "advisory": 2,
+        "approvedBy": "1882467643",
+        "approvedAt": "2026-09-23T21:31:35.994Z"
+      }
     }
   ]
 }
