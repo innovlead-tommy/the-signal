@@ -241,6 +241,22 @@
         "approvedBy": "1882467643",
         "approvedAt": "2026-09-23T21:31:35.994Z"
       }
+    },
+    {
+      "slug": "vol-30-2026-09-30",
+      "title": "Vol. 30 — Wednesday, September 30, 2026",
+      "volume": 30,
+      "date": "Wednesday, September 30, 2026",
+      "summary": "Across every domain this week, we witness the collapse of external illusions in favor of internal substance. Leibniz argued that every entity generates its own reality from within,…",
+      "governance": {
+        "gateVersion": "1.7",
+        "verdict": "PASS",
+        "checksRun": 12,
+        "blocking": 0,
+        "advisory": 2,
+        "approvedBy": "1882467643",
+        "approvedAt": "2026-09-30T16:59:41.940Z"
+      }
     }
   ]
 }
